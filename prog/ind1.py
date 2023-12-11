@@ -8,9 +8,6 @@ if __name__=="__main__":
     if len(A) != 10:
         print("Неверный размер списка", file = sys.stderr)
         exit(1)
-    r=0
-    for item in A:
-       if item>0:
-            r-=item
-            
-    print("Разноость положительных элементов в списке: ",r) 
+        
+    rr = -sum([a for a in A if a > 0])
+    print("Разноость положительных элементов в списке: ", rr) 
